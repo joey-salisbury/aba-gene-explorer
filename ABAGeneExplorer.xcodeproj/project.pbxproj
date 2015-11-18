@@ -13,10 +13,11 @@
 		457BA0E31BFBDCF600089442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457BA0E11BFBDCF600089442 /* Main.storyboard */; };
 		457BA0E51BFBDCF600089442 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 457BA0E41BFBDCF600089442 /* Assets.xcassets */; };
 		457BA0E81BFBDCF600089442 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457BA0E61BFBDCF600089442 /* LaunchScreen.storyboard */; };
+		457BA0F11BFBFA6F00089442 /* PickerViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 457BA0F01BFBFA6F00089442 /* PickerViewHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		457BA0D51BFBDCF600089442 /* ABA Gene Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ABA Gene Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		457BA0D51BFBDCF600089442 /* ABAGeneExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ABAGeneExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		457BA0D91BFBDCF600089442 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		457BA0DB1BFBDCF600089442 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		457BA0DC1BFBDCF600089442 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +27,8 @@
 		457BA0E41BFBDCF600089442 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		457BA0E71BFBDCF600089442 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		457BA0E91BFBDCF600089442 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		457BA0EF1BFBFA6F00089442 /* PickerViewHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerViewHelper.h; sourceTree = "<group>"; };
+		457BA0F01BFBFA6F00089442 /* PickerViewHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerViewHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +45,7 @@
 		457BA0CC1BFBDCF500089442 = {
 			isa = PBXGroup;
 			children = (
-				457BA0D71BFBDCF600089442 /* ABA Gene Explorer */,
+				457BA0D71BFBDCF600089442 /* ABAGeneExplorer */,
 				457BA0D61BFBDCF600089442 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,14 +53,16 @@
 		457BA0D61BFBDCF600089442 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				457BA0D51BFBDCF600089442 /* ABA Gene Explorer.app */,
+				457BA0D51BFBDCF600089442 /* ABAGeneExplorer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		457BA0D71BFBDCF600089442 /* ABA Gene Explorer */ = {
+		457BA0D71BFBDCF600089442 /* ABAGeneExplorer */ = {
 			isa = PBXGroup;
 			children = (
+				457BA0EF1BFBFA6F00089442 /* PickerViewHelper.h */,
+				457BA0F01BFBFA6F00089442 /* PickerViewHelper.m */,
 				457BA0DB1BFBDCF600089442 /* AppDelegate.h */,
 				457BA0DC1BFBDCF600089442 /* AppDelegate.m */,
 				457BA0DE1BFBDCF600089442 /* ViewController.h */,
@@ -68,6 +73,7 @@
 				457BA0E91BFBDCF600089442 /* Info.plist */,
 				457BA0D81BFBDCF600089442 /* Supporting Files */,
 			);
+			name = ABAGeneExplorer;
 			path = "ABA Gene Explorer";
 			sourceTree = "<group>";
 		};
@@ -82,9 +88,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		457BA0D41BFBDCF600089442 /* ABA Gene Explorer */ = {
+		457BA0D41BFBDCF600089442 /* ABAGeneExplorer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 457BA0EC1BFBDCF600089442 /* Build configuration list for PBXNativeTarget "ABA Gene Explorer" */;
+			buildConfigurationList = 457BA0EC1BFBDCF600089442 /* Build configuration list for PBXNativeTarget "ABAGeneExplorer" */;
 			buildPhases = (
 				457BA0D11BFBDCF600089442 /* Sources */,
 				457BA0D21BFBDCF600089442 /* Frameworks */,
@@ -94,9 +100,9 @@
 			);
 			dependencies = (
 			);
-			name = "ABA Gene Explorer";
+			name = ABAGeneExplorer;
 			productName = "ABA Gene Explorer";
-			productReference = 457BA0D51BFBDCF600089442 /* ABA Gene Explorer.app */;
+			productReference = 457BA0D51BFBDCF600089442 /* ABAGeneExplorer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -113,7 +119,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 457BA0D01BFBDCF600089442 /* Build configuration list for PBXProject "ABA Gene Explorer" */;
+			buildConfigurationList = 457BA0D01BFBDCF600089442 /* Build configuration list for PBXProject "ABAGeneExplorer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -126,7 +132,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				457BA0D41BFBDCF600089442 /* ABA Gene Explorer */,
+				457BA0D41BFBDCF600089442 /* ABAGeneExplorer */,
 			);
 		};
 /* End PBXProject section */
@@ -151,6 +157,7 @@
 			files = (
 				457BA0E01BFBDCF600089442 /* ViewController.m in Sources */,
 				457BA0DD1BFBDCF600089442 /* AppDelegate.m in Sources */,
+				457BA0F11BFBFA6F00089442 /* PickerViewHelper.m in Sources */,
 				457BA0DA1BFBDCF600089442 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,7 +273,7 @@
 				INFOPLIST_FILE = "ABA Gene Explorer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.freshpeach.ABA-Gene-Explorer";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ABAGeneExplorer;
 			};
 			name = Debug;
 		};
@@ -277,14 +284,14 @@
 				INFOPLIST_FILE = "ABA Gene Explorer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.freshpeach.ABA-Gene-Explorer";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ABAGeneExplorer;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		457BA0D01BFBDCF600089442 /* Build configuration list for PBXProject "ABA Gene Explorer" */ = {
+		457BA0D01BFBDCF600089442 /* Build configuration list for PBXProject "ABAGeneExplorer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				457BA0EA1BFBDCF600089442 /* Debug */,
@@ -293,13 +300,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		457BA0EC1BFBDCF600089442 /* Build configuration list for PBXNativeTarget "ABA Gene Explorer" */ = {
+		457BA0EC1BFBDCF600089442 /* Build configuration list for PBXNativeTarget "ABAGeneExplorer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				457BA0ED1BFBDCF600089442 /* Debug */,
 				457BA0EE1BFBDCF600089442 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

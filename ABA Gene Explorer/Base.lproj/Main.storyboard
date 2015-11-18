@@ -1,25 +1,104 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0mq-Ru-IAG">
+                                <rect key="frame" x="13" y="487" width="294" height="29"/>
+                                <animations/>
+                                <segments>
+                                    <segment title="Sagittal"/>
+                                    <segment title="Coronal"/>
+                                </segments>
+                                <connections>
+                                    <action selector="sectionTypeChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="gXY-jv-Nbi"/>
+                                </connections>
+                            </segmentedControl>
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kRE-es-Yuw">
+                                <rect key="frame" x="16" y="374" width="288" height="100"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Yx0-A0-q5z"/>
+                                </constraints>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fl4-XC-RWf">
+                                <rect key="frame" x="13" y="530" width="295" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Load Image Set"/>
+                                <connections>
+                                    <action selector="loadImageSetPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Ye-TM-W84"/>
+                                </connections>
+                            </button>
+                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R4x-Uz-THX">
+                                <rect key="frame" x="10" y="28" width="300" height="330"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="330" id="Tra-Ny-BpN"/>
+                                    <constraint firstAttribute="width" constant="300" id="hOJ-rg-6n8"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gene Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J3E-5l-vaO">
+                                <rect key="frame" x="22" y="41" width="278" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="k5l-y0-RrT">
+                                <rect key="frame" x="150" y="183" width="20" height="20"/>
+                                <animations/>
+                            </activityIndicatorView>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="DHZ-gh-mNV">
+                                <rect key="frame" x="206" y="319" width="94" height="29"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="sectionValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="mnS-c2-d13"/>
+                                </connections>
+                            </stepper>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kRE-es-Yuw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-4" id="3Ac-Cq-cEz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DHZ-gh-mNV" secondAttribute="trailing" id="8Oc-qe-2OF"/>
+                            <constraint firstItem="fl4-XC-RWf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-7" id="GRt-qM-D60"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kRE-es-Yuw" secondAttribute="trailing" constant="-4" id="HNh-ff-xOo"/>
+                            <constraint firstItem="fl4-XC-RWf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ikr-8h-0rS"/>
+                            <constraint firstItem="R4x-Uz-THX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bUw-19-Rxg"/>
+                            <constraint firstItem="0mq-Ru-IAG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dYp-Hg-CtE"/>
+                            <constraint firstItem="kRE-es-Yuw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rjb-9u-AKT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fl4-XC-RWf" secondAttribute="trailing" constant="-7" id="sfy-1K-nfm"/>
+                            <constraint firstItem="kRE-es-Yuw" firstAttribute="top" secondItem="DHZ-gh-mNV" secondAttribute="bottom" constant="26" id="ysb-z5-d82"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activitySpinner" destination="k5l-y0-RrT" id="Igm-wi-9KT"/>
+                        <outlet property="geneLabel" destination="J3E-5l-vaO" id="NTG-BU-1fZ"/>
+                        <outlet property="genePicker" destination="kRE-es-Yuw" id="0qZ-xo-siR"/>
+                        <outlet property="loadImageSetButton" destination="fl4-XC-RWf" id="xD0-Sk-vVz"/>
+                        <outlet property="sectionSegmentControl" destination="0mq-Ru-IAG" id="1A4-EK-KxL"/>
+                        <outlet property="sectionStepper" destination="DHZ-gh-mNV" id="JjZ-Fl-Ihk"/>
+                        <outlet property="sectionViewer" destination="R4x-Uz-THX" id="tge-0j-yhC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="123" y="324"/>
         </scene>
     </scenes>
 </document>

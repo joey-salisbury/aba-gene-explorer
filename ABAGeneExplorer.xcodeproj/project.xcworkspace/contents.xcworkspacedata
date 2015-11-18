@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:ABA Gene Explorer.xcodeproj">
+      location = "self:/Users/jpsbury/Desktop/iOS Projects/ABA Gene Explorer/ABAGeneExplorer.xcodeproj">
    </FileRef>
 </Workspace>
